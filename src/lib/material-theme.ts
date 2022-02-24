@@ -2,19 +2,19 @@
  * Main utilities for Material Theme integration
  */
 
-import {IDefaults} from '../../typings/interfaces/defaults';
+import { IDefaults } from "../../typings/interfaces/defaults";
 
 export const materialThemes = [
-  'Material Theme',
-  'Material Theme High Contrast',
-  'Material Theme Darker',
-  'Material Theme Darker High Contrast',
-  'Material Theme Palenight',
-  'Material Theme Palenight High Contrast',
-  'Material Theme Ocean',
-  'Material Theme Ocean High Contrast',
-  'Material Theme Lighter',
-  'Material Theme Lighter High Contrast'
+  'Inscist',
+  'Inscist High Contrast',
+  'Inscist Darker',
+  'Inscist Darker High Contrast',
+  'Inscist Palenight',
+  'Inscist Palenight High Contrast',
+  'Inscist Ocean',
+  'Inscist Ocean High Contrast',
+  'Inscist Lighter',
+  'Inscist Lighter High Contrast'
 ];
 
 export const isMaterialTheme = (currentThemeId: string): boolean =>

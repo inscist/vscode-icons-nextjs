@@ -1,4 +1,4 @@
-import {join} from 'path';
+import { join } from "path";
 
 export const PATHS = {
   rootDir: join(__dirname, '../../../'),  // From `out` dir
@@ -8,5 +8,5 @@ export const PATHS = {
 };
 
 export const FILES = {
-  persistentSettings: 'eq-material-theme-icons.json',
+  persistentSettings: 'in-material-theme-icons.json',
 };

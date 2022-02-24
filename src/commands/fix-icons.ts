@@ -1,16 +1,13 @@
-import * as fs from 'fs';
+import * as fs from "fs";
+
+import { IAccents } from "../../typings/interfaces/defaults";
+import { IThemeIconsIconPath } from "../../typings/interfaces/icons";
+import { getAbsolutePath, getDefaultsJson, getIconsVariantJson, getPackageJson } from "../lib/fs";
+import { getIconsPath } from "../lib/icons";
+import { getThemeIconVariant, isMaterialTheme } from "../lib/material-theme";
 import {
-  getCurrentThemeID,
-  getCurrentIconsID,
-  setIconsID,
-  getMaterialThemeSettings,
-  reloadWindow
-} from '../lib/vscode';
-import {isMaterialTheme, getThemeIconVariant} from '../lib/material-theme';
-import {getDefaultsJson, getPackageJson, getIconsVariantJson, getAbsolutePath} from '../lib/fs';
-import {getIconsPath} from '../lib/icons';
-import {IAccents} from '../../typings/interfaces/defaults';
-import {IThemeIconsIconPath} from '../../typings/interfaces/icons';
+    getCurrentIconsID, getCurrentThemeID, getMaterialThemeSettings, reloadWindow, setIconsID
+} from "../lib/vscode";
 
 const getIconDefinition = (definitions: any, iconName: string): IThemeIconsIconPath =>
   (definitions as any)[iconName];
@@ -51,7 +48,7 @@ export default async (): Promise<void> => {
   const materialIconVariantID: string | undefined = getThemeIconVariant(DEFAULTS, themeLabel);
   const currentThemeIconsID: string = getCurrentIconsID();
   const newThemeIconsID = materialIconVariantID ?
-    `eq-material-theme-icons-${materialIconVariantID}` : 'eq-material-theme-icons';
+    `in-material-theme-icons-${materialIconVariantID}` : 'in-material-theme-icons';
 
   // Just set the correct Material Theme icons variant if wasn't
   // Or also change the current icons set to the Material Theme icons variant
